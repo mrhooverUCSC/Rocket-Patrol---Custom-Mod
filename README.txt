@@ -9,6 +9,8 @@ Movement While Launching - 5 Points
   Removed the (!.isFiring) if statement in the [Rocket.js] class
 Randomize Movement Direction At Start - 5 Points
   Random value of 0 or 1 at intilization: If 1, moves to the right, flips the sprite, and resets on the right side.
+Alter Spaceship - 20 Points
+  Moves faster, smaller ship, higher score.  Moves at the lowest position of the 4 ships.
 
 Progress:
 double check the timer
