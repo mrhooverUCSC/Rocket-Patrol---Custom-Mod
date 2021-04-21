@@ -11,6 +11,9 @@ Randomize Movement Direction At Start - 5 Points
   Random value of 0 or 1 at intilization: If 1, moves to the right, flips the sprite, and resets on the right side.
 Alter Spaceship - 20 Points
   Moves faster, smaller ship, higher score.  Moves at the lowest position of the 4 ships.
+Time Gain On Hit - 20 Points
+  Adds 3000ms to the clock on every kill
+
 
 Progress:
 double check the timer

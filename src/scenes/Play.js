@@ -84,11 +84,6 @@ class Play extends Phaser.Scene {
         // GAME OVER flag
         this.gameOver = false;
 
-        //MOD: Timer
-        this.clock = this.time.delayedCall(1000, () => {
-            console.log(1);
-        }, null, this);
-
         // 60-second play clock
         scoreConfig.fixedWidth = 0;
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
@@ -99,6 +94,7 @@ class Play extends Phaser.Scene {
     }
 
     update() {
+        console.log(this.clock.getElapsed()); // MOD: timer
         // check key input for restart / menu
         if(this.gameOver && Phaser.Input.Keyboard.JustDown(keyR)) {
             this.scene.restart();
@@ -158,7 +154,6 @@ class Play extends Phaser.Scene {
     }
 
     checkCollision(rocket, ship) {
-        // simple AABB checking
         if (rocket.x < ship.x + ship.width && 
             rocket.x + rocket.width > ship.x && 
             rocket.y < ship.y + ship.height &&
@@ -183,7 +178,9 @@ class Play extends Phaser.Scene {
         // score add and repaint
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score; 
-        
+        //MOD: Timer increase on enemy death
+        this.clock.delay += 3000;
+
         this.sound.play('sfx_explosion');
       }
 }
