@@ -1,3 +1,7 @@
+/*  Matthew Hoover
+    Rocket Patrol Mods
+    4/21/2021
+*/
 // Rocket prefab
 class Rocket extends Phaser.GameObjects.Sprite {
     constructor(scene, x, y, p, texture, frame) {

@@ -1,3 +1,8 @@
+/*  Matthew Hoover
+    Rocket Patrol Mods
+    4/21/2021
+*/
+
 //MOD: New Spaceship
 class SpaceshipAlter extends Phaser.GameObjects.Sprite {
     constructor(scene, x, y, texture, frame, pointValue){

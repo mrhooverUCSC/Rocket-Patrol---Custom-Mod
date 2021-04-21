@@ -1,3 +1,8 @@
+/*  Matthew Hoover
+    Rocket Patrol Mods
+    4/21/2021
+*/
+
 class Menu extends Phaser.Scene {
     constructor() {
         super("menuScene");

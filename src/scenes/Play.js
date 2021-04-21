@@ -1,3 +1,8 @@
+/*  Matthew Hoover
+    Rocket Patrol Mods
+    4/21/2021
+*/
+
 class Play extends Phaser.Scene {
     constructor() {
         super("playScene");
@@ -11,9 +16,15 @@ class Play extends Phaser.Scene {
         this.load.image('starfield', './assets/starfield.png');
         // load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
+        //MOD: particles
+        this.load.image('explosion_particle', './assets/explosion_particle.png');
     }
 
     create() {
+        //game.physics.startSystem(Phaser.Physics.ARCADE);
+        console.log(game);
+        console.log(this);
+
         // place tile sprite
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
